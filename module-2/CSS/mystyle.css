@@ -1,0 +1,99 @@
+/********** Base styles **********/
+* {
+  box-sizing: border-box;
+}
+h1 {
+    margin-bottom: 15px;
+    text-align: center;
+    font-family: Apple Chancery, cursive;
+    font-weight: bold;
+    font-size: 40px;
+    font-style: italic;
+}
+body{
+    background-color:rgb(255, 165, 0);
+}
+
+p {
+    background-color:#7CFC00;
+    padding: 20px ;
+    border:2px solid black;
+    width: 100%;
+    margin: 10px;
+    margin-right: auto;
+    margin-left: auto;
+
+}
+#content{
+  padding-top: 17px;
+}
+#container{
+  flex: 33.33%;
+    padding:10px;
+  
+}
+div #title1{
+    background-color: rgb(255, 20, 153);
+    padding:3px;
+    border:2px solid black;
+    width: 4em;
+    left:120px;
+    text-align: center;
+    font-weight: bold;
+    font-size:120%;
+    float:right;
+  
+}
+
+div #title2{
+    background-color: red;
+    padding:3px;
+    border:2px solid black;
+    width: 4em;
+    left:50px;
+    text-align: center;
+    font-weight: bold;
+    font-size:120%;
+    float:right;
+  
+}
+
+div #title3{
+    background-color: #1E90FF;
+    padding:3px;
+    border:2px solid black;
+    width: 4em;
+    left:50px;
+    text-align: center;
+    font-weight: bold;
+    font-size:120%;
+    float:right;
+  
+}
+
+
+/* Simple Responsive Framework. */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/********** Large devices only **********/
+@media screen and (min-width: 992px) {
+    #container{
+      flex:10%;
+    }  
+}
+
+/********** Medium devices only **********/
+@media screen and (min-width: 767px) and (max-width: 991px) {
+    #container{
+      flex:50%;
+    }   
+}
+/********** small devices only **********/
+@media screen and (max-width: 767px) {
+    #container{
+      flex:90%;
+    }   
+}
