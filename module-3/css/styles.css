@@ -17,15 +17,17 @@ body {
 
 .navbar-brand {
   padding-top: 25px;
+  height: 90px;
 }
 
 .navbar-brand h1 { /* Restaurant name */
   font-family: 'Lora', serif;
   color: #FFD700;
-  font-size: 1.5em;
-  text-transform: uppercase;
+  
+  padding-top: 10px;
+  font-size: 2.5em;
   font-weight: bold;
-  text-shadow: 1px 1px 1px #222;
+  text-shadow: 2px 1px 4px yellow;
   margin-top: 0;
   margin-bottom: 0;
   line-height: .75;
@@ -38,40 +40,53 @@ body {
   margin-top: 10px;
 }
 #nav-list a {
-  color: #951C49;
+  color: #FFD700;
   text-align: center;
+  font-size: 18.5px;
+  font-weight: bold;
 }
-#nav-list a:hover {
-  background: #E7E7E7;
+#nav-list a:hover,.navbar-header button.navbar-toggle:hover,.navbar-header .icon-bar {
+  background: #20B2AA;
+  border: 1.5px solid black;
 }
 #nav-list a span {
-  font-size: 1.8em;
+  font-size: 1.2em;
 }
 
 .navbar-header button.navbar-toggle, .navbar-header .icon-bar {
-  border: 1px solid #FFD700;
+  border: 1.5px solid #FFD700;
 }
 .navbar-header button.navbar-toggle {
   clear: both;
-  margin-top: -30px; 
+  margin-top: -50px; 
 }
 #content {
-    width: 100%;
-    margin:  auto ;
-    padding: 4px ;
+    color:white;
     font-style: italic;
+    font-family: 'Lora', serif;
 }
-div #title{
+div #title-1,#title-2,#title-3{
     width: 100%;
     left:120px;
     text-align: center;
     font-weight: bold;
     font-size:200%;
-    padding:10px;
+    padding:7px;
     color:black;
     font-weight: bold;
     font-family: Apple Chancery, cursive;
     opacity: .8;
+}
+#sec a{
+  color:black;
+  text-decoration: underline;
+}
+
+#sec{
+  color:#00008B;
+  font-weight:bold;
+  float:right;
+  font-style: inherit;
 }
 .menu {
   text-align: center;
@@ -83,74 +98,49 @@ div #title{
   text-shadow: 4px 2px 1px #222;
   text-decoration: none;
 }
-div .container{
-  border:2px solid black;
-  margin-top: 10px;
-}
-#p1{
-  background-color: #20B2AA;  
-}
-#main-content{
-  float:left;  
-  text-align:center;
-}
-/********** Large devices only **********/
-@media (min-width: 992px) {
-  .navbar-brand {
-    
-    height: 90px;
-  }
-  .navbar-brand h1 { /* Restaurant name */
-    padding-top: 10px;
-    font-size: 2.5em; /* 1vw = 1% of viewport width */
-  }
-  div .container {
-    padding-bottom: 20px;  
-    width:90%;
-    margin-left:auto;
-    margin-right:auto;
-  }
 
+#p1,#p2,#p3{
+  background-color: #20B2AA;
+  text-align:center;
+  border:2px solid black;
+  padding:10px;
 }
-/********** Medium devices only **********/
-@media (min-width: 768px) and (max-width: 991px) {
-  .navbar-brand {
-    
-    height: 90px;
-  }
-  .navbar-brand h1 { /* Restaurant name */
-    padding-top: 10px;
-    font-size: 2.5em; /* 1vw = 1% of viewport width */
-  }
-  div .container {
-    padding-bottom: 20px; 
-    width:90%;
-    margin-left:auto;
-    margin-right:auto;
+.container{
+  margin-bottom:10px;
+  width:100%;
+}
+
+#main-content{
+  margin-bottom: 15px;
+  margin-left: 10px;
+  margin-right:10px;
+}
+
+
+
+/********** Large devices only *******
+@media screen and (min-width: 992px) {
+  #main-content> #container {
+    flex:10%;
   }
 }
-/********** Small devices only **********/
-@media (max-width: 767px) {
+/********* Medium devices only ********
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  #main-content> #container {
+    flex:50%;
+  }
+}
+/********* Small devices only *********/
+@media screen and (max-width: 767px) {
   
-  .navbar-brand {
-    
-    height: 70px;
-  }
-  .navbar-brand h1 { /* Restaurant name */
-    padding-top: 10px;
-    font-size: 2.5em; /* 1vw = 1% of viewport width */
-  }
-  #collapsable-nav a { /* Collapsed nav menu text */
+  #collapsable-nav a {
     font-size: 1.2em;
   }
-  #collapsable-nav a span { /* Collapsed nav menu glyph */
+  #collapsable-nav a span { 
     font-size: 1em;
     margin-right: 5px;
   }
-  div .container {
-    padding-bottom: 20px; 
-    width:90%;  
-    margin-left:auto;
-    margin-right:auto;
-  }
+  /*div .container {
+    flex:100%;
+  }*/
 }
