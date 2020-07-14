@@ -38,8 +38,8 @@ WARNING!!! WARNING!!!
   var name = ["Yaakov", "John", "Jen", "Jason", "Paul", "Frank", "Larry", "Paula", "Laura", "Jim"];  
   var i;
   for (i=0;i<name.length;i++) {
-    j=name[i];
-    if( (name[i].charAt(0)=="J") || (name[i].charAt(0)=="j") ){
+    var firstLetter =name[i].charAt(0).toLowerCase();
+    if(firstLetter=="j"){
       byeSpeaker.speak(name[i]); 
     }else{
       helloSpeaker.speak(name[i]);  
