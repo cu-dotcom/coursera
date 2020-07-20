@@ -97,26 +97,20 @@ function buildAndShowHomeHTML (categories) {
   $ajaxUtils.sendGetRequest(
     homeHtmlUrl,
     function (homeHtml) {
-      $ajaxUtils.sendGetRequest(
-        chooseRandomCategory,
-        function (chooseRandomCategory) {
-          var finhtml=homeHtml;
-          homeHtml+="<section class='row'>";
-          for (var j=0; j<categories.length;j++){
-            var homeHtmlToInsertIntoMainPage = categoryHtml;
-            var chosenCategoryShortName = categories[i].short_name;
-            homeHtmlToInsertIntoMainPage = insertProperty(html,"randomCategoryShortName",chosenCategoryShortName);
-            finhtml+=homeHtmlToInsertIntoMainPage;  
-          }
-          finhtml+="</section>";
-          return finhtml;
+      var chosenCategoryShortName=chooseRandomCategory(categories).short_name;
+      chosenCategoryShortName="'" + chosenCategoryShortName + "'";
+      var homeHtmlToInsertIntoMainPage = insertProperty(homeHtml,"randomCategoryShortName",chosenCategoryShortName);
+      insertHtml('#main-content',homeHtmlToInsertIntoMainPage);  
+    },
+    false); // False here because we are getting just regular HTML from the server, so no need to process JSON.
+}    
       
       // TODO: STEP 2: Here, call chooseRandomCategory, passing it retrieved 'categories'
       // Pay attention to what type of data that function returns vs what the chosenCategoryShortName
       // variable's name implies it expects.
       
         
-      },false);
+      
       // TODO: STEP 3: Substitute {{randomCategoryShortName}} in the home html snippet with the
       // chosen category from STEP 2. Use existing insertProperty function for that purpose.
       // Look through this code for an example of how to do use the insertProperty function.
@@ -136,9 +130,7 @@ function buildAndShowHomeHTML (categories) {
       // of how to do that.
       // ....
 
-    },
-    false); // False here because we are getting just regular HTML from the server, so no need to process JSON.
-}
+    
 
 
 // Given array of category objects, returns a random category object.
