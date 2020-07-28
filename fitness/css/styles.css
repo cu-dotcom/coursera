@@ -1,0 +1,288 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-size: 16px;
+  color: #fff;
+  background: #11998e;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #38ef7d, #11998e);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #38ef7d, #11998e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+ /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  font-family: 'Oxygen', sans-serif;
+}
+  
+
+
+
+/** HEADER **/
+#header-nav {
+  /*#00008B ;*/
+  
+  background: #11998e;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #38ef7d, #11998e);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #38ef7d, #11998e);
+  border: 10px;
+  padding:10px;
+}
+.navbar-brand {
+  
+  padding-top: 30px;
+  height: 70px;
+}
+.navbar-brand h1 { /* Restaurant name */
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  color: black;
+  font-size: 3.5em;
+  font-weight: bold;
+  text-shadow: 2px 1px 4px white;
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: .55;
+}
+#collapsable-nav>#nav-list a:hover,.navbar-header button.navbar-toggle:hover,.navbar-header .icon-bar {
+  /*background: #20B2AA;
+  border: 1.5px solid black;*/
+}
+.navbar-brand a:hover, .navbar-brand a:focus {
+  text-decoration: none;
+}
+#collapsable-nav> #nav-list {
+  margin-top: 10px;
+}
+#collapsable-nav> #nav-list a {
+  color: black;
+  text-align: center;
+  font-size: 18.5px;
+  font-weight: bold;
+}
+
+#collapsable-nav> #nav-list a span {
+  font-size: 1.2em;
+}
+
+.navbar-header button.navbar-toggle, .navbar-header .icon-bar {
+  border: 1.5px solid black;
+}
+.navbar-header button.navbar-toggle {
+  clear: both;
+  margin-top: -40px; 
+}
+#content {
+    color:white;
+    width:100%;
+}
+#content-abs {
+    color:white;
+    width:100%;
+    opacity:1;
+    transition: .5s ease;
+    backface-visibility: hidden;
+    display: block;
+    
+}
+.middle{
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top:40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+.text {
+  position:relative;
+  width:100%;
+  color: black;
+  font-size: 20px;
+  margin-top: auto;
+  margin-left:auto;
+  border-radius: 20px;
+  display: block;
+}
+#rps{
+  position:absolute;
+  width:100%;
+  margin-bottom:10px;
+  padding:20px;
+  color: black;
+  font-size: 15px;
+  margin-top: auto;
+  margin-left:auto;
+  border-radius: 20px;
+  display: block;
+  border-radius: 10px;
+  border-color: black;
+}
+
+div #title-1,#title-2,#title-3,#title-4,#title-5{
+    width: 100%;
+    left:120px;
+    text-align: center;
+    font-weight: bold;
+    font-size:200%;
+    padding:0px;
+    color:black;
+    font-weight: bold;
+    font-family: Apple Chancery, cursive;
+    opacity: .8;
+}
+.menu {
+  text-align: center;
+  width:100%;
+  font-size:3em;
+  font-family: Apple Chancery, cursive;
+  color:blue;
+  font-weight: bold;
+  text-shadow: 3px 1px 1px #222;
+  text-decoration: none;
+}
+
+.container.menu{
+  margin-bottom:0px;
+  width:100%;
+}
+
+#main-content{
+  padding:10px;
+  
+  margin-left: 10px;
+  margin-right:10px;
+}
+#main-content .container{
+  position:relative;
+  width:100%;
+}
+#main-content .container:hover #content-abs{
+  opacity:0.5;
+}
+#main-content .container:hover .middle{
+  opacity:1;
+}
+.center{
+  width:100%;
+  display:block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+  float: right;
+  height: auto;
+  border-radius: 20px;
+}
+.center-abs{
+  width:100%;
+  display:block;
+  margin-left: auto;
+  margin-right: auto;
+  
+  height: auto;
+  border-radius: 20px;
+}
+.center:hover,.center:focus{
+  box-shadow: 0 1px 5px 1px black;
+}
+.center-abs:hover,.center-abs:focus{
+  box-shadow: 0 1px 5px 1px black;
+  transition: .5s ease;
+  opacity:0.3;
+}
+
+/*nutrition*/
+.para{
+  width:100%;
+  text-align: center;
+  font-style: italic;
+  font-size:1em;
+  font-weight: bold;
+}
+.diet{
+  border-radius: 20px;
+  width:100%;
+  margin-left:auto;
+  margin-right:auto;
+  font-size:1em;
+  color:black;
+  font-family: 'Oxygen', sans-serif;
+}
+
+
+
+ /*FOOTER*/ 
+.panel-footer {
+  
+  padding-top: 20px;
+  padding-bottom: 0px;
+  background: #11998e;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #38ef7d, #11998e);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #38ef7d, #11998e);
+  border-top: 0;
+}
+
+.panel-footer div.row {
+  margin-bottom: 0px;
+}
+.rule{
+  border:solid black;
+}
+
+#hours > span{
+  font-size: 1.3em;
+  font-family: 'Yanone Kaffeesatz', sans-serif; 
+  font-weight: bold;
+
+}
+.text-center{
+  font-weight: bold;
+  color:black;
+}
+
+
+/*END FOOTER */
+
+/********** Large devices only *******
+@media screen and (min-width: 992px) {
+  #main-content> #container {
+    flex:10%;
+  }
+}
+/********* Medium devices only ********/
+@media  (min-width: 768px) and (max-width: 988px) {
+  .navbar-brand h1{
+    font-size: 2.8em;
+  }
+}
+/********* Small devices only *********/
+@media  (min-width: 500px) and (max-width: 767px) {
+  
+  #collapsable-nav a {
+    font-size: 1.2em;
+  }
+  #collapsable-nav a span { 
+    font-size: 1em;
+    margin-right: 5px;
+  }
+  .navbar-brand h1{
+    font-size: 2.6em;
+  }
+}
+/********* Small devices only *********/
+@media  (max-width: 500px) {
+
+  #collapsable-nav a {
+    font-size: 1.2em;
+  }
+  #collapsable-nav a span { 
+    font-size: 1em;
+    margin-right: 5px;
+  }
+  .navbar-brand h1{
+    font-size: 2.5em;
+  }
+  .navbar-brand {
+    padding-top: 35px;
+    height: 70px;
+  }
+  #hours > span{
+    font-size: 1em;
+  }
+}
