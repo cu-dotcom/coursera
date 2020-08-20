@@ -34,34 +34,20 @@
     <div class="col-md-6" ng-controller="ToBuyController as list1">
      <h2>To Buy:</h2>
      <ul >
-       <li input ng-model="list1.itemName">Buy 10 cookies <button class="btn btn-default" ng-click="list1.removeItem($index);"><span class="glyphicon glyphicon-ok"></span> Bought</button> </li>
-       
-       <li ng-model="list1.itemName">Buy 20 softdrinks <button class="btn btn-default" ng-click="list1.removeItem($index);"><span class="glyphicon glyphicon-ok"></span> Bought</button></li>
-       
-       <li ng-model="list1.itemName">Buy 15 chips <button class="btn btn-default" ng-click="list1.removeItem($index);"><span class="glyphicon glyphicon-ok"></span> Bought</button></li>
-       
-       <li ng-model="list1.itemName">Buy 5 samose <button class="btn btn-default" ng-click="list1.removeItem($index);"><span class="glyphicon glyphicon-ok"></span> Bought</button></li>
-       
-       <li ng-model="list1.itemName">Buy 10 notebooks <button class="btn btn-default" ng-click="list1.removeItem($index);"><span class="glyphicon glyphicon-ok"></span> Bought</button></li>
+       <li ng-repeat="item in list1.items ">Buy {{item.quantity}} {{item.name}} <button class="btn btn-default" ng-click="list1.tobuyitem($index);"><span class="glyphicon glyphicon-ok"></span> Bought</button> </li>
      
      </ul>
-     <div class="emptyMessage" ng-if="list1.errorMessage">everything is bought</div>
+     <div class="emptyMessage" ng-if="list1.items.length==0">everything is bought</div>
     </div>
 
     <!-- Already Bought List -->
     <div class="col-md-6" ng-controller="AlreadyBoughtController as list2">
      <h2>Already Bought:</h2>
      <ul >
-       <li ng-model="list2.itemName2">Bought 10 cookies</li>
-       
-       <li ng-model="list2.itemName2">Bought 20 softdrinks</li>
-       <li ng-model="list2.itemName2">Bought 15 chips</li>
-       <li ng-model="list2.itemName2">Bought 5 samose</li>
-       <li ng-model="list2.itemName2">Bought 10 notebooks</li>
-      
+       <li ng-repeat="item in list2.items">Bought {{item.quantity}} {{item.name}}</li>
      </ul>
    
-     <div class="emptyMessage">Nothing bought yet.</div>
+     <div class="emptyMessage" ng-if="list2.items.length==0">Nothing bought yet.</div>
     </div>
   </div>
 </div>
